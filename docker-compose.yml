@@ -1,0 +1,34 @@
+version: "3"
+services:
+  perf_low:
+    image: perf-test
+    container_name: perf_low
+    deploy:
+      resources:
+        limits:
+          cpus: "0.5"
+          memory: 256M
+    volumes:
+      - ./output:/app/output
+
+  perf_mid:
+    image: perf-test
+    container_name: perf_mid
+    deploy:
+      resources:
+        limits:
+          cpus: "1.0"
+          memory: 512M
+    volumes:
+      - ./output:/app/output
+
+  perf_high:
+    image: perf-test
+    container_name: perf_high
+    deploy:
+      resources:
+        limits:
+          cpus: "2.0"
+          memory: 1G
+    volumes:
+      - ./output:/app/output
