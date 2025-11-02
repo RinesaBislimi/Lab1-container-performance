@@ -1,7 +1,9 @@
 # Lab1-container-performance
 Ne terminal
-Komanda 1 - docker build -t perf-test .
-Komanda 2 - docker compose up
+Komanda 1 - docker build --no-cache -t perf-test .
 
-Automatikisht krijohet folderi output per png dhe text format 
+Komanda 2 - docker run -v "${PWD}:/app/output" perf-test
+
+
+Automatikisht krijohet folderi output me png per secilen per load balancer  e kejt kto rastet
 
