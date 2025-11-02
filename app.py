@@ -3,7 +3,8 @@ import time
 import os
 import random
 import matplotlib.pyplot as plt
-
+import datetime
+ 
 def cpu_stress(n):
     result = 0
     for i in range(n):
@@ -27,6 +28,9 @@ for cycle in range(3):
     load_distribution[chosen_cpu] += 1
     print(f"Cikli {cycle+1}: Load balancer caktoi CPU={chosen_cpu}")
 
+start_time = datetime.datetime.now()
+print(f"Testi fillon në: {start_time}")
+
 for cpu in cpu_limits:
     print(f"Testi me CPU={cpu} | Memory={MEM}MB | Iterations={N}")
     start = time.time()
@@ -46,6 +50,9 @@ for cpu in cpu_limits:
     plt.close()
 
     print(f"Perfundon: {exec_time:.2f} sekonda (Grafiku: result_{cpu}.png)")
+
+end_time = datetime.datetime.now()
+print(f"Testi përfundon në: {end_time}")
 
 plt.figure()
 plt.plot(cpu_limits, execution_times, marker='o', color='orange')

@@ -19,24 +19,6 @@
 ---
 
 ### **Anëtarët e Grupit:**
-
-
-# Universiteti i Prishtinës “Hasan Prishtina”
-## Fakulteti i Inxhinierisë Elektrike dhe Kompjuterike
-
-**Niveli:** Master  
-**Lënda:** Menaxhimi i Burimeve në Cloud Computing  
-
----
-
-### **Titulli i Projektit:**  
-**Optimizimi i Performancës së Kontejnerëve nën Kufizime të Burimeve**
-
-**Profesor:** Prof. Dr. Artan Mazrekaj  
-
----
-
-### **Anëtarët e Grupit:**
 - **Alba Thaqi**  
 - **Rinesa Bislimi**
 
@@ -62,7 +44,7 @@ docker build --no-cache -t perf-test .
 Në PowerShell (Windows) përdor këtë komandë:
 
 ```bash
-docker build --no-cache -t perf-test .
+docker run -v "${PWD}:/app" perf-test
 ```
 
 
